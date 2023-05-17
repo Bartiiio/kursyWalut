@@ -13,13 +13,13 @@ import api from "./api.js";
 const selectedCountry = async () => {
    const value = country1Select.value;
    const apis = await api(value);
-   value1 = apis;
+   value1 = apis.value;
 };
 
 const selectedCountry1 = async () => {
    const value = country2Select.value;
    const apis = await api(value);
-   value2 = apis;
+   value2 = apis.value;
 };
 
 const calc = function (value1, value2, inputvalue) {
@@ -59,7 +59,17 @@ inputNumber.addEventListener("input", () => {
 
 window.addEventListener("load", async () => {
    const data = await load();
+   const dataDay = data.date;
+   const options = data.valuesArr;
+
+   options.forEach((element) => {
+      const html = `<option value="${element.code}">${element.currency}</option>`;
+      country1Select.insertAdjacentHTML("beforeend", html);
+      country2Select.insertAdjacentHTML("beforeend", html);
+   });
+
+   const html = `<option value="">polskie złotówki</option>`;
    spinner.style.display = "none";
    outputDate.style.display = "block";
-   outputDate.innerHTML = `Kursy z dnia: ${data} z NBP`;
+   outputDate.innerHTML = `Kursy z dnia: ${dataDay} z NBP`;
 });
