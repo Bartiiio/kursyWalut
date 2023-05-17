@@ -7,18 +7,17 @@ let value1;
 let value2;
 let inputvalue = 1;
 import load from "./load.js";
-import api1 from "./api1.js";
-import api2 from "./api2.js";
+import api from "./api.js";
 
 const selectedCountry = async () => {
    const value = country1Select.value;
-   const apis = await api1(value);
+   const apis = await api(value);
    value1 = apis;
 };
 
 const selectedCountry1 = async () => {
    const value = country2Select.value;
-   const apis = await api2(value);
+   const apis = await api(value);
    value2 = apis;
 };
 

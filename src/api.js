@@ -1,8 +1,7 @@
 const api = async (data) => {
    const tab = ["a"];
    let valuesArr = [];
-   let value1;
-   let value2;
+   let value;
 
    const tabmap = tab.map(async (element) => {
       return await fetch(
@@ -22,9 +21,9 @@ const api = async (data) => {
 
    objectValues.forEach((element) => {
       if (element.code == `${data}`) {
-         value2 = element;
+         value = element;
       }
    });
-   return value2;
+   return value;
 };
 export default api;
