@@ -59,5 +59,5 @@ inputNumber.addEventListener("input", () => {
 
 window.addEventListener("load", async () => {
    const data = await load();
-   outputDate.innerHTML = `Kursy z dnia: ${data}`;
+   outputDate.innerHTML = `Kursy z dnia: ${data} z NBP`;
 });
