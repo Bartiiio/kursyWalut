@@ -7,6 +7,7 @@ body {
 }
 
 .main {
+    position: relative;
     max-width: 600px;
     height: 300px;
     padding: 20px;
@@ -48,6 +49,14 @@ button:hover {
     background-color: #f9f9f9;
     box-sizing: border-box;
     width: 75%;
+}
+
+.outputDate {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
 }
 
 select {

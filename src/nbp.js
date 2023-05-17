@@ -2,9 +2,11 @@ const country1Select = document.getElementById("country1-select");
 const country2Select = document.getElementById("country2-select");
 const inputNumber = document.getElementById("input-number");
 const output = document.querySelector(".output");
+const outputDate = document.querySelector(".outputDate");
 let value1;
 let value2;
 let inputvalue = 1;
+import load from "./load.js";
 import api1 from "./api1.js";
 import api2 from "./api2.js";
 
@@ -53,4 +55,9 @@ country2Select.addEventListener("change", async () => {
 inputNumber.addEventListener("input", () => {
    inputvalue = inputNumber.value;
    calc(value1, value2, inputvalue);
+});
+
+window.addEventListener("load", async () => {
+   const data = await load();
+   outputDate.innerHTML = `Kursy z dnia: ${data}`;
 });
