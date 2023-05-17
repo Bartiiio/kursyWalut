@@ -110,28 +110,6 @@ select.select-country option {
     padding: 8px;
 }
 
-/* Dostosowanie pod iPhone 12 Pro */
-@media only screen and (max-width: 428px) {
-    .main {
-        max-width: 80%;
-        height: auto;
-    }
-
-    .output {
-        width: 90%;
-    }
-
-    select,
-    input[type="number"] {
-        width: 100%;
-    }
-
-    .outputDate {
-        font-size: 10px;
-        font-weight: bold;
-        bottom: 2px;
-    }
-}
 
 #spinner {
     position: absolute;
@@ -153,5 +131,35 @@ select.select-country option {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* Dostosowanie pod iPhone 12 Pro */
+@media only screen and (max-width: 428px) {
+    .main {
+        max-width: 80%;
+        height: 28%;
+    }
+
+    .output {
+        width: 90%;
+    }
+
+    select,
+    input[type="number"] {
+        width: 100%;
+    }
+
+    .outputDate {
+        font-size: 10px;
+        font-weight: bold;
+        bottom: 2px;
+    }
+
+    #spinner {
+        left: 48%;
+        width: 25px;
+        height: 25px;
+        bottom: 5px;
     }
 }
