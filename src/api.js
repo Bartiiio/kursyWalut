@@ -1,5 +1,5 @@
 const api = async (data) => {
-   const tab = ["a", "b"];
+   const tab = ["b", "a"];
    let valuesArr = [];
    let value;
 

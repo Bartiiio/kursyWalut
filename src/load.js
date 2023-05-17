@@ -7,7 +7,7 @@ const load = async () => {
    const date = currvalutes.effectiveDate;
    ////////////////////////////////////////////////
 
-   const tab = ["a", "b"];
+   const tab = ["b", "a"];
    let valuesArr = [];
    let value;
 
