@@ -1,6 +1,7 @@
 const country1Select = document.getElementById("country1-select");
 const country2Select = document.getElementById("country2-select");
 const inputNumber = document.getElementById("input-number");
+const spinner = document.getElementById("spinner");
 const output = document.querySelector(".output");
 const outputDate = document.querySelector(".outputDate");
 let value1;
@@ -58,5 +59,7 @@ inputNumber.addEventListener("input", () => {
 
 window.addEventListener("load", async () => {
    const data = await load();
+   spinner.style.display = "none";
+   outputDate.style.display = "block";
    outputDate.innerHTML = `Kursy z dnia: ${data} z NBP`;
 });
