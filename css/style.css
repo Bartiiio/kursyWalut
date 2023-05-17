@@ -134,7 +134,6 @@ select.select-country option {
     }
 }
 
-/* Dostosowanie pod iPhone 12 Pro */
 @media only screen and (max-width: 428px) {
     .main {
         max-width: 80%;
