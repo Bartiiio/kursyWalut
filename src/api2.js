@@ -25,7 +25,6 @@ const api = async (data) => {
          value2 = element;
       }
    });
-   console.log(value2);
    return value2;
 };
 export default api;

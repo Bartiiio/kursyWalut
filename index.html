@@ -6,21 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/calc.png">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Sprawdź kursik</title>
-    <style>
-        .output {
-            height: 200px;
-            width: 400px;
-            border: 1px solid gray;
-            margin-top: 30px;
-            font-size: 36px;
-        }
-    </style>
+
 </head>
 
 <body>
     <div class="main">
-        <input id="input-number" type="number">
+        <input id="input-number" type="number" value="1">
         <select id="country1-select">
             <option value="">Wybierz państwo</option>
             <option value="PLN">polskie złotówki</option>
@@ -60,6 +53,7 @@
         </select>
         <select id="country2-select">
             <option value="">Wybierz państwo</option>
+            <option value="PLN" selected>polskie złotówki</option>
             <option value="THB">bat (Tajlandia)</option>
             <option value="USD">dolar amerykański</option>
             <option value="AUD">dolar australijski</option>
@@ -94,7 +88,7 @@
             <option value="CNY">yuan renminbi (Chiny)</option>
             <option value="XDR">SDR (MFW)</option>
         </select>
-        <div class="output"></div>
+        <div class="output">Wybierz Państwa</div>
 
     </div>
 

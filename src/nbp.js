@@ -21,7 +21,15 @@ const selectedCountry1 = async () => {
 };
 
 const calc = function (value1, value2, inputvalue) {
-   if (!value1) {
+   if (value1 && value2 === undefined) {
+      const calced = inputvalue * value1.mid;
+      output.innerHTML = `${inputvalue} ${value1.code} to ${calced.toFixed(
+         2
+      )} PLN`;
+   } else if (value1 === undefined && value2 === undefined) {
+      const calced = inputvalue;
+      output.innerHTML = `${inputvalue} PLN to ${inputvalue} PLN`;
+   } else if (!value1) {
       const calced = inputvalue / value2.mid;
       output.innerHTML = `${inputvalue} PLN to ${calced.toFixed(2)} ${
          value2.code
@@ -34,13 +42,15 @@ const calc = function (value1, value2, inputvalue) {
    }
 };
 
-country1Select.addEventListener("change", () => {
-   selectedCountry();
+country1Select.addEventListener("change", async () => {
+   await selectedCountry();
+   calc(value1, value2, inputvalue);
 });
-country2Select.addEventListener("change", () => {
-   selectedCountry1();
+country2Select.addEventListener("change", async () => {
+   await selectedCountry1();
+   calc(value1, value2, inputvalue);
 });
-inputNumber.addEventListener("change", () => {
+inputNumber.addEventListener("input", () => {
    inputvalue = inputNumber.value;
    calc(value1, value2, inputvalue);
 });
